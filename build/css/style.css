@@ -767,7 +767,7 @@ body {
   color: #474747;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  background-color: #e8a500; }
+  background-color: #ff8a00; }
 
 .container {
   background-color: #ffffff;
@@ -832,28 +832,136 @@ h4 {
 .serv-wrapper30 {
   max-width: 30%; }
 
-.header__info {
-  text-align: right; }
-
-.header__city {
-  font-weight: bold; }
-
-.header__email {
-  margin-top: 0px; }
-
-.header__tel {
-  margin-bottom: 8px; }
-
-.header .nav {
-  margin-top: 20px; }
-
 .logo {
   display: block;
-  margin-top: 10px; }
+  max-height: 80px;
+  max-width: 260px;
+  margin-top: 17px; }
 
-.row-header {
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+.search {
+  width: calc(100% - 21px);
+  position: relative; }
+  .search__input {
+    width: 100%;
+    margin-top: 20px;
+    height: 38px;
+    padding-left: 12px;
+    font-size: 14px; }
+  .search__button {
+    position: absolute;
+    height: 38px;
+    width: 52px;
+    background-color: #474747;
+    outline: none;
+    border: none;
+    top: 20px;
+    right: 0; }
+    .search__button:after {
+      position: absolute;
+      background-image: url(../img/png-sprite.png);
+      background-position: 0px -24px;
+      width: 20px;
+      height: 20px;
+      content: '';
+      top: 10px;
+      right: 14px; }
+
+.contacts {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  font-size: 18px; }
+  .contacts__tel {
+    margin-right: 47px;
+    margin-top: 22px; }
+    .contacts__tel a {
+      display: block;
+      font-weight: bold; }
+  .contacts__city {
+    margin-top: 22px;
+    margin-right: 35px; }
+  .contacts__time {
+    margin-right: 70px;
+    margin-top: 22px; }
+
+.cart {
+  font-size: 14px;
+  position: relative; }
+  .cart__quantity {
+    background-color: #e31e25;
+    color: #ffffff;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+    font-size: 12px;
+    position: absolute;
+    top: 27px;
+    left: 35px;
+    z-index: 100; }
+  .cart__price {
+    font-weight: bold;
+    margin-top: 40px;
+    text-align: right;
+    padding-right: 15px;
+    margin-bottom: 10px;
+    position: relative; }
+    .cart__price:before {
+      content: '';
+      position: absolute;
+      background-image: url(../img/cart.svg);
+      height: 20px;
+      width: 20px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      left: 25px;
+      z-index: 1;
+      top: -3px; }
+    .cart__price:after {
+      content: '';
+      position: absolute;
+      background-image: url(../img/png-sprite.png);
+      background-position: -20px -24px;
+      width: 11px;
+      height: 11px;
+      right: 0;
+      top: 4px; }
+  .cart__btn {
+    border: 1px solid #dddddd;
+    padding: 5px 8px; }
+    .cart__btn:hover {
+      background-color: #dddddd; }
+
+.nav {
+  position: relative;
+  margin-left: 8px; }
+  .nav__list {
+    list-style-type: none;
+    background-color: #e31e25;
+    width: 100%;
+    height: 38px;
+    margin-top: 5px;
+    padding-left: 0; }
+  .nav__item {
+    display: inline-block;
+    background-color: #e31e25;
+    height: 100%; }
+    .nav__item--last {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: #ff8a00; }
+  .nav__link {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+    margin: 10px 22px; }
+    .nav__link--last {
+      margin: 10px 40px; }
 
 .footer .row {
   -ms-flex-align: center;
@@ -1594,8 +1702,6 @@ h4 {
   .serv-wrapper30 {
     min-width: 100%; } }
   @media (max-width: 33.74em) {
-  .header__info {
-    text-align: center; }
   .logo {
     text-align: center; }
   .footer .row {
