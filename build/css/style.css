@@ -767,7 +767,27 @@ body {
   color: #474747;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  background-color: #ff8a00; }
+  position: relative; }
+  body:before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url(../img/background.svg) no-repeat;
+    background-size: cover;
+    z-index: -2; }
+  body:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url(../img/pattern.png) repeat;
+    background-size: 175px 180px;
+    z-index: -1; }
 
 .container {
   background-color: #ffffff;
@@ -1040,6 +1060,60 @@ h4 {
     left: 0px;
     z-index: 100;
     top: calc(50% - 20px); }
+
+.catalog {
+  padding-bottom: 80px; }
+  .catalog .col-xs-4 {
+    padding-right: 20px; }
+    .catalog .col-xs-4:nth-child(3n) {
+      padding-right: 0; }
+  .catalog__card {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    border: 1px solid #dddddd;
+    margin-bottom: 30px; }
+  .catalog__img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain; }
+  .catalog__title {
+    margin-top: 7px;
+    margin-bottom: 2px; }
+  .catalog__city {
+    margin-top: 2px;
+    margin-bottom: 3px; }
+  .catalog__price {
+    font-size: 24px;
+    margin-top: 3px;
+    font-weight: bold;
+    margin-bottom: 0; }
+  .catalog__quantity {
+    margin-top: 0;
+    font-size: 14px; }
+  .catalog__btn {
+    background-color: #ff8a00;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    cursor: pointer; }
+    .catalog__btn:hover {
+      background-color: #e31e25; }
+    .catalog__btn--in-card {
+      font-weight: bold; }
+  .catalog__code {
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 2px; }
   @media (min-width: 540px) {
   .container {
     max-width: 480px; }

@@ -19,10 +19,32 @@ body {
   color: $grey;
   font-family: $font-family;
   font-size: $font-size-text;
-  background-color: $orange;
+  // background-color: $orange;
   // background: url(../img/background.svg) no-repeat,
   // url(../img/pattern.png) repeat;
-
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url(../img/background.svg) no-repeat;
+    background-size: cover;
+    z-index: -2;
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url(../img/pattern.png) repeat;
+    background-size: 175px 180px;
+    z-index: -1;
+  }
 }
 
 .container {

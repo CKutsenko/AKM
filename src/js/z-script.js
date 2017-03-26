@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
 /* Аккордеон*/
   $('.sidebar__link').click(function(e){
     e.preventDefault();
-    if($(this).next('.sidebar__item').is(":visible")) {
+     if($(this).next('.sidebar__sublist').is(":visible")) {
       $(this).next('.sidebar__sublist').slideUp();
       $(this).closest('.sidebar__item').removeClass('sidebar__item--active');
     } else {
