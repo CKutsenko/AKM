@@ -11,14 +11,28 @@
 html {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  background-image: url(../img/background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 body {
   margin: 0;
   background-color: $body-bg;
-  color: $text-color;
+  color: $grey;
   font-family: $font-family;
   font-size: $font-size-text;
+  background-image: url(../img/pattern.svg);
+  background-size: 200px 200px;
+  background-repeat: repeat;
+}
+
+.container {
+  background-color: $white;
+  -webkit-box-shadow: 55px 0 0 0 rgba(255,255,255,1),
+  -55px 0 0 0 rgba(255,255,255,1);
+  box-shadow: 55px 0 0 0 rgba(255,255,255,1),
+  -55px 0 0 0 rgba(255,255,255,1);
 }
 
 a {
