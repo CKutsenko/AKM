@@ -2,13 +2,16 @@ jQuery(document).ready(function($){
 
 
 /* Аккордеон*/
-  $('.sidebar-link__btn').click(function(e){
+  $('.sidebar__link').click(function(e){
     e.preventDefault();
-    if($(this).next('.sidebar-link__accordion').is(":visible")) {
-      $(this).next('.sidebar-link__accordion').hide();
+    if($(this).next('.sidebar__sublist').is(":visible")) {
+      $(this).next('.sidebar-link__sublist').slideUp();
+      $(this).removeClass('sidebar__item--active');
     } else {
-      $(this).closest('.sidebar').find('.sidebar-link__accordion').hide();
-      $(this).next('.sidebar-link__accordion').show();
+      $(this).closest('.sidebar').find('.sidebar__sublist').slideUp();
+      $(this).closest('.sidebar').find('.sidebar__item').removeClass('sidebar__item--active');
+      $(this).next('.sidebar__sublist').slideDown();
+      $(this).addClass('sidebar__item--active');
     }
   });
 

@@ -1010,6 +1010,14 @@ h4 {
     opacity: .8; }
   .socials__link:hover img {
     opacity: 1; }
+
+.sidebar__sublist {
+  display: none; }
+
+.sidebar__item--active {
+  font-weight: bold; }
+  .sidebar__item--active .sidebar__sublist {
+    display: block; }
   @media (min-width: 540px) {
   .container {
     max-width: 480px; }
