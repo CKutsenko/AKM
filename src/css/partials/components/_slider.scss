@@ -1,6 +1,9 @@
 .slider {
   position: relative;
   margin-top: 20px;
+  @include mq($from:xs, $until:xl){
+    display: none;
+  }
   &__img {
     max-height: 300px;
     width: 100%;

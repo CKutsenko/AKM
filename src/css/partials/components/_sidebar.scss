@@ -3,19 +3,38 @@
   &__list {
     padding-left: 0;
     list-style-type: none;
+    @include mq($from:xs, $until:md){
+      display: none;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 0;
+    }
   }
   &__link {
     font-size: 20px;
     width: 100%;
+    @include mq($from:xs, $until:md){
+      font-size: 18px;
+      text-align: center;
+    }
   }
   &__item {
     padding-bottom: 13px;
+    @include mq($from:xs, $until:md){
+      padding-bottom: 7px;
+      border-bottom: 1px solid #dddddd;
+    }
   }
   &__sublist {
     display: none;
     font-size: 18px;
     list-style-type: none;
     padding-top: 10px;
+    @include mq($from:xs, $until:md){
+      font-size: 14px;
+      padding-top: 4px;
+      padding-left: 0;
+    }
   }
   &__item--active {
     font-weight: bold;
@@ -31,5 +50,75 @@
     &--active {
       font-weight: bold;
     }
+  }
+}
+
+.mobile-nav {
+  min-height: 40px;
+  width: 100%;
+  background-color: $red;
+  color: $white;
+  display: none;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 0;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 10px;
+  @include mq($from:xs, $until:md){
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+  }
+  &__text {
+    margin: 0;
+  }
+  &__hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: $white;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: .3s;
+    &--close {
+      background-color: $red;
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(135deg);
+      }
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      width: 25px;
+      height: 3px;
+      background-color: $white;
+      margin-right: 10px;
+      top: -7px;
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      width: 25px;
+      height: 3px;
+      background-color: $white;
+      margin-right: 10px;
+      top: 7px;
+    }
+  }
+}
+
+.mobile-nav__hamburger.mobile-nav__hamburger--close {
+  &:after {
+    top: 0;
+  }
+  &:before {
+    top: 0;
   }
 }

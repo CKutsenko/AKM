@@ -942,7 +942,8 @@ h4 {
       top: 4px; }
   .cart__btn {
     border: 1px solid #dddddd;
-    padding: 5px 8px; }
+    padding: 5px 8px;
+    display: inline-block; }
     .cart__btn:hover {
       background-color: #dddddd; }
 
@@ -1024,6 +1025,62 @@ h4 {
     .sidebar__sublink--active {
       font-weight: bold; }
 
+.mobile-nav {
+  min-height: 40px;
+  width: 100%;
+  background-color: #e31e25;
+  color: #ffffff;
+  display: none;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 0;
+  -ms-flex-align: center;
+      align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 10px; }
+  .mobile-nav__text {
+    margin: 0; }
+  .mobile-nav__hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: .3s; }
+    .mobile-nav__hamburger--close {
+      background-color: #e31e25; }
+      .mobile-nav__hamburger--close:before {
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
+      .mobile-nav__hamburger--close:after {
+        -ms-transform: rotate(135deg);
+            transform: rotate(135deg); }
+    .mobile-nav__hamburger:before {
+      position: absolute;
+      content: '';
+      width: 25px;
+      height: 3px;
+      background-color: #ffffff;
+      margin-right: 10px;
+      top: -7px; }
+    .mobile-nav__hamburger:after {
+      position: absolute;
+      content: '';
+      width: 25px;
+      height: 3px;
+      background-color: #ffffff;
+      margin-right: 10px;
+      top: 7px; }
+
+.mobile-nav__hamburger.mobile-nav__hamburger--close:after {
+  top: 0; }
+
+.mobile-nav__hamburger.mobile-nav__hamburger--close:before {
+  top: 0; }
+
 .slider {
   position: relative;
   margin-top: 20px; }
@@ -1063,9 +1120,9 @@ h4 {
 
 .catalog {
   padding-bottom: 80px; }
-  .catalog .col-xs-4 {
+  .catalog .col-md-4 {
     padding-right: 20px; }
-    .catalog .col-xs-4:nth-child(3n) {
+    .catalog .col-md-4:nth-child(3n) {
       padding-right: 0; }
   .catalog__card {
     display: -moz-flex;
@@ -1826,9 +1883,90 @@ h4 {
     -ms-flex-item-align: stretch;
     -ms-grid-row-align: stretch;
     align-self: stretch; } }
-  @media (max-width: 33.74em) {
-  .logo {
+  @media (max-width: 47.99em) {
+  .title {
+    text-align: center;
+    font-size: 22px;
+    margin: 10px 0; }
+  .contacts {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-left: 10px; }
+  .contacts__tel {
+    margin: 0;
+    font-size: 14px; }
+  .contacts__city {
+    margin: 7px 0 0;
+    font-size: 14px; }
+  .contacts__time {
+    margin: 0;
+    font-size: 14px; }
+  .cart {
+    position: absolute;
+    top: -20px;
+    right: 10px; }
+  .sidebar__list {
+    display: none;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 0; }
+  .sidebar__link {
+    font-size: 18px;
     text-align: center; }
+  .sidebar__item {
+    padding-bottom: 7px;
+    border-bottom: 1px solid #dddddd; }
+  .sidebar__sublist {
+    font-size: 14px;
+    padding-top: 4px;
+    padding-left: 0; }
+  .mobile-nav {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -ms-flexbox;
+    display: flex; } }
+  @media (max-width: 73.115em) {
+  .logo {
+    height: 40px;
+    width: 130px;
+    padding-left: 5px;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: calc(50% - 75px); }
+  .search {
+    display: none; }
+  .nav {
+    display: none; }
+  .slider {
+    display: none; }
+  .catalog {
+    padding-bottom: 20px; }
+  .catalog .col-md-4 {
+    padding-right: 0; }
+  .catalog__card {
+    margin: 15px; } }
+  @media (min-width: 48em) and (max-width: 73.115em) {
+  .contacts__tel {
+    margin-top: 10px;
+    font-size: 14px; }
+  .contacts__city {
+    margin-top: 10px;
+    font-size: 14px; }
+  .contacts__time {
+    margin-top: 10px;
+    font-size: 14px; } }
+  @media (max-width: 33.74em) {
   .footer .row {
     -ms-flex-pack: center;
     justify-content: center; }

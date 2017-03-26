@@ -16,16 +16,13 @@ jQuery(document).ready(function($){
   });
 
   /* Hamburger */
-  if ($(window).width() < 768) {
-    var headerNavItem = $('.header .nav__item');
-    $('.nav__hamburger').show();
-    $(headerNavItem).hide();
-    $('.hamburger').click(function(e){
+
+    $('.mobile-nav__hamburger').click(function(e){
       e.preventDefault();
-      $(this).toggleClass('hamburger--close');
-      $(headerNavItem).toggle();
+      $(this).toggleClass('mobile-nav__hamburger--close');
+      $('.sidebar__list').toggle();
     });
-  }
+
 
 
   /* Карусель на карте */

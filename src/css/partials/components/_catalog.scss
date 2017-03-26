@@ -1,0 +1,72 @@
+.catalog {
+  padding-bottom: 80px;
+    @include mq($from:xs, $until:xl){
+      padding-bottom: 20px;
+    }
+  .col-md-4 {
+    padding-right: 20px;
+    @include mq($from:xs, $until:xl){
+      padding-right: 0;
+    }
+    &:nth-child(3n) {
+      padding-right: 0;
+    }
+  }
+  &__card {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dddddd;
+    margin-bottom: 30px;
+    @include mq($from:xs, $until:xl){
+      margin: 15px;
+    }
+  }
+  &__img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+  }
+  &__title {
+    margin-top: 7px;
+    margin-bottom: 2px;
+  }
+  &__city {
+    margin-top: 2px;
+    margin-bottom: 3px;
+  }
+  &__price {
+    font-size: 24px;
+    margin-top: 3px;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  &__quantity {
+    margin-top: 0;
+    font-size: 14px;
+  }
+  &__btn {
+    background-color: $orange;
+    color: $white;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    cursor: pointer;
+    &:hover {
+      background-color: $red;
+    }
+    &--in-card {
+      font-weight: bold;
+    }
+  }
+  &__code {
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 2px;
+  }
+}

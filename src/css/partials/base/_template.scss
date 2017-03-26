@@ -114,4 +114,9 @@ h4{
   font-size: 30px;
   font-weight: bold;
   margin: 23px 0;
+  @include mq($from:xs, $until:md){
+    text-align: center;
+    font-size: 22px;
+    margin: 10px 0;
+  }
 }
