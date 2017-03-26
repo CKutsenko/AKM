@@ -29,12 +29,12 @@ jQuery(document).ready(function($){
 
 
   /* Карусель на карте */
-  $('.map__wrapper').slick({
+  $('.slider').slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    dots: true,
-    arrows: false,
+    dots: false,
+    arrows: true,
     autoplay: true,
     autoplaySpeed: 3000
   });
