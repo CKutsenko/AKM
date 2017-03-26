@@ -1,8 +1,40 @@
 .slider {
+  position: relative;
+  margin-top: 20px;
+  &__img {
+    max-height: 300px;
+    width: 100%;
+    object-fit:cover;
+  }
   .slick-arrow {
     outline: none;
     font-size: 0;
     background-color: rgba(0,0,0,0);
     border: none;
+  }
+  .slick-prev {
+    position: absolute;
+    background-image: url(../img/arrow.svg);
+    height: 80px;
+    width: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: '';
+    right: 0px;
+    z-index: 100;
+    top: calc(50% - 60px);
+    transform: rotate(180deg);
+  }
+  .slick-next {
+    position: absolute;
+    background-image: url(../img/arrow.svg);
+    height: 80px;
+    width: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: '';
+    left: 0px;
+    z-index: 100;
+    top: calc(50% - 20px);
   }
 }

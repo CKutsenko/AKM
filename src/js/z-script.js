@@ -5,13 +5,13 @@ jQuery(document).ready(function($){
   $('.sidebar__link').click(function(e){
     e.preventDefault();
     if($(this).next('.sidebar__item').hasClass('sidebar__item--active')) {
-      $(this).next('.sidebar-link__sublist').slideUp();
-      $(this).removeClass('sidebar__item--active');
+      $(this).next('.sidebar__sublist').slideUp();
+      $(this).closest('sidebar__item').removeClass('sidebar__item--active');
     } else {
       $(this).closest('.sidebar').find('.sidebar__sublist').slideUp();
       $(this).closest('.sidebar').find('.sidebar__item').removeClass('sidebar__item--active');
       $(this).next('.sidebar__sublist').slideDown();
-      $(this).addClass('sidebar__item--active');
+      $(this).closest('sidebar__item').addClass('sidebar__item--active');
     }
   });
 
