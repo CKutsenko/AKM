@@ -759,11 +759,7 @@ th {
   box-sizing: inherit; }
 
 html {
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-  background-image: url(../img/background.svg);
-  background-size: cover;
-  background-repeat: no-repeat; }
+  box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -771,9 +767,7 @@ body {
   color: #474747;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  background-image: url(../img/pattern.svg);
-  background-size: 200px 200px;
-  background-repeat: repeat; }
+  background-color: #e8a500; }
 
 .container {
   background-color: #ffffff;

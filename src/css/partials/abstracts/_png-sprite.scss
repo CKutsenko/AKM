@@ -31,6 +31,17 @@ $s-hamburger-total-width: 51px;
 $s-hamburger-total-height: 44px;
 $s-hamburger-image: '../img/png-sprite.png';
 $s-hamburger: (0px, 0px, 0px, 0px, 30px, 24px, 51px, 44px, '../img/png-sprite.png', 's-hamburger', );
+$s-rub-name: 's-rub';
+$s-rub-x: 20px;
+$s-rub-y: 24px;
+$s-rub-offset-x: -20px;
+$s-rub-offset-y: -24px;
+$s-rub-width: 11px;
+$s-rub-height: 11px;
+$s-rub-total-width: 51px;
+$s-rub-total-height: 44px;
+$s-rub-image: '../img/png-sprite.png';
+$s-rub: (20px, 24px, -20px, -24px, 11px, 11px, 51px, 44px, '../img/png-sprite.png', 's-rub', );
 $s-search-name: 's-search';
 $s-search-x: 0px;
 $s-search-y: 24px;
@@ -45,7 +56,7 @@ $s-search: (0px, 24px, 0px, -24px, 20px, 20px, 51px, 44px, '../img/png-sprite.pn
 $spritesheet-width: 51px;
 $spritesheet-height: 44px;
 $spritesheet-image: '../img/png-sprite.png';
-$spritesheet-sprites: ($s-hamburger-close, $s-hamburger, $s-search, );
+$spritesheet-sprites: ($s-hamburger-close, $s-hamburger, $s-rub, $s-search, );
 $spritesheet: (51px, 44px, '../img/png-sprite.png', $spritesheet-sprites, );
 
 // The provided mixins are intended to be used with the array-like variables
