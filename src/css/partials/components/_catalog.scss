@@ -1,5 +1,5 @@
 .catalog {
-  padding-bottom: 80px;
+  padding-bottom: 30px;
     @include mq($from:xs, $until:xl){
       padding-bottom: 20px;
     }
@@ -12,6 +12,24 @@
       padding-right: 0;
     }
   }
+  &__new {
+    position: absolute;
+    background-color: $new;
+    color: $white;
+    font-weight: bold;
+    padding: 10px;
+    left: 0;
+    top: 30px;
+  }
+  &__sale {
+    position: absolute;
+    background-color: $sale;
+    color: $white;
+    font-weight: bold;
+    padding: 10px;
+    left: 0;
+    top: 30px;
+  }
   &__card {
     display: -webkit-flex;
     display: -moz-flex;
@@ -23,6 +41,7 @@
     justify-content: center;
     border: 1px solid #dddddd;
     margin-bottom: 30px;
+    position: relative;
     @include mq($from:xs, $until:xl){
       margin: 15px;
     }

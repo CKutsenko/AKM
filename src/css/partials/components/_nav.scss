@@ -1,210 +1,210 @@
-.nav-bgr {
-  background-color: $light-blue;
-}
+// .nav-bgr {
+//   background-color: $light-blue;
+// }
 
-.nav{
-  font-size: $base-font-size + 2px;
-  color: $white;
-  @include mq($from:xs, $until:md){
-    border-bottom: none;
-  }
+// .nav{
+//   font-size: $base-font-size + 2px;
+//   color: $white;
+//   @include mq($from:xs, $until:md){
+//     border-bottom: none;
+//   }
 
-  &__list{
-    font-size: $font-size;
-    padding-left: 0;
-    margin: 0;
-    list-style-type: none;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    @include mq($from:xs, $until:md){
-      display: block;
-      text-align: center;
-    }
-  }
+//   &__list{
+//     font-size: $font-size;
+//     padding-left: 0;
+//     margin: 0;
+//     list-style-type: none;
+//     display: flex;
+//     flex-wrap: nowrap;
+//     justify-content: space-between;
+//     @include mq($from:xs, $until:md){
+//       display: block;
+//       text-align: center;
+//     }
+//   }
 
-  &__item{
-  .dropdown-menu{
-      display: flex;
-    }
-  }
-
-
-  &__link{
-    display: inline-block;
-    padding: 13px 15px;
-    color: $white;
-    @include mq($from:xs, $until:xl){
-      display: block;
-      padding: 15px;
-    }
-    &:hover, &:focus {
-      text-decoration: underline;
-      color: $white;
-    }
-    &:active {
-      background-color: $white;
-      color: $red;
-      text-decoration: none;
-    }
-    @include mq($from:xs, $until:md){
-      padding-bottom: 5px;
-    }
-
-    &--active{
-      font-weight: bold;
-      background-color: $red;
-    }
-  }
-  &__title{
-    margin: 0;
-    text-transform: uppercase;
-    color: $dark-blue;
-    font-size: $font-size;
-    font-weight: $regular;
-  }
+//   &__item{
+//   .dropdown-menu{
+//       display: flex;
+//     }
+//   }
 
 
-  &--footer{
-    margin-top: 20px;
-    border-bottom: none;
-    font-size: $font-size-content;
-    .nav__list{
-      display: block;
-      text-align: left;
-    }
-    .nav__item{
-      margin: 15px 0;
-      padding-bottom: 0;
-      &:after{
-        content: "";
-      }
-    }
-    .nav__link{
-      padding-bottom: 0;
-      &--active{
-        border-bottom: 2px solid $light-blue;
-      }
-    }
-  }
-}
+//   &__link{
+//     display: inline-block;
+//     padding: 13px 15px;
+//     color: $white;
+//     @include mq($from:xs, $until:xl){
+//       display: block;
+//       padding: 15px;
+//     }
+//     &:hover, &:focus {
+//       text-decoration: underline;
+//       color: $white;
+//     }
+//     &:active {
+//       background-color: $white;
+//       color: $red;
+//       text-decoration: none;
+//     }
+//     @include mq($from:xs, $until:md){
+//       padding-bottom: 5px;
+//     }
 
-.dropdown-menu{
-  // width: 270px;
-  font-size: $font-size-promo;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: -10px;
-  list-style-type: none;
-  background-color: $body-bg;
-  border: 2px solid $dark-blue;
-  display: none;
-  position: absolute;
-  z-index: 2;
-  bottom: 15px;
-  left: 0;
-  transform: translateY(100%);
-  // display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  &__item{
-    width: 20%;
-    padding: 15px 5px;
-    // border-bottom: 1px solid $dark-blue;
-    // &:nth-last-of-type(1){
-    //   border-bottom: none;
-    // }
-    &:hover, &:focus, &:active{
-      background-color: $light-blue;
-      .dropdown-menu__link{
-        color: $text-color-white;
-        transition: none;
-      }
-    }
-  }
-  &__link{
-    display: inline-block;
-    padding: 0 10px;
-  }
-}
-
-.search{
-
-  padding-top: 10px;
-  &__form{
-    display: none;
-  }
-  &__input{
-    width: 320px;
-    font-size: $font-size-small;
-    color: #000;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 20px;
-    box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.36);
-    @include mq($from:xs, $until:xl){
-      width: 280px;
-    }
-    &:hover, &:focus{
-      outline: none;
-    }
-    &:focus::-webkit-input-placeholder{
-      color: transparent;
-    }
-    &:focus::placeholder{
-      color: transparent;
-    }
-  }
-  &__icon{
-    display: block;
-    position: absolute;
-    z-index: 3;
-    right: 0;
-    top: 50%;
-    transform: translate(-100%, -50%);
-    @include sprite($s-loupe);
-    background-color: transparent;
-    border: none;
-    outline: none;
-
-    @include mq($from:md, $until:lg){
-      position: relative;
-      top: inherit;
-      right: 10px;
-      transform: none;
-      display: inline-block;
-      vertical-align: bottom;
-    }
-    @include mq($from:xs, $until:md){
-      position: relative;
-      transform: none;
-      display: inline-block;
-
-    }
-  }
-}
+//     &--active{
+//       font-weight: bold;
+//       background-color: $red;
+//     }
+//   }
+//   &__title{
+//     margin: 0;
+//     text-transform: uppercase;
+//     color: $dark-blue;
+//     font-size: $font-size;
+//     font-weight: $regular;
+//   }
 
 
-.hamburger{
-  display: inline-block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  @include sprite($s-hamburger);
-}
+//   &--footer{
+//     margin-top: 20px;
+//     border-bottom: none;
+//     font-size: $font-size-content;
+//     .nav__list{
+//       display: block;
+//       text-align: left;
+//     }
+//     .nav__item{
+//       margin: 15px 0;
+//       padding-bottom: 0;
+//       &:after{
+//         content: "";
+//       }
+//     }
+//     .nav__link{
+//       padding-bottom: 0;
+//       &--active{
+//         border-bottom: 2px solid $light-blue;
+//       }
+//     }
+//   }
+// }
 
-.hamburger--close{
-  @include sprite($s-hamburger-close);
-}
+// .dropdown-menu{
+//   // width: 270px;
+//   font-size: $font-size-promo;
+//   padding-left: 0;
+//   margin-top: 0;
+//   margin-bottom: 0;
+//   margin-left: -10px;
+//   list-style-type: none;
+//   background-color: $body-bg;
+//   border: 2px solid $dark-blue;
+//   display: none;
+//   position: absolute;
+//   z-index: 2;
+//   bottom: 15px;
+//   left: 0;
+//   transform: translateY(100%);
+//   // display: flex;
+//   flex-wrap: wrap;
+//   width: 100%;
+//   &__item{
+//     width: 20%;
+//     padding: 15px 5px;
+//     // border-bottom: 1px solid $dark-blue;
+//     // &:nth-last-of-type(1){
+//     //   border-bottom: none;
+//     // }
+//     &:hover, &:focus, &:active{
+//       background-color: $light-blue;
+//       .dropdown-menu__link{
+//         color: $text-color-white;
+//         transition: none;
+//       }
+//     }
+//   }
+//   &__link{
+//     display: inline-block;
+//     padding: 0 10px;
+//   }
+// }
 
-.fixed {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: rgba(51,190,229, 0.9);
+// .search{
 
-  .nav {
-    margin-top: 0;
-  }
-}
+//   padding-top: 10px;
+//   &__form{
+//     display: none;
+//   }
+//   &__input{
+//     width: 320px;
+//     font-size: $font-size-small;
+//     color: #000;
+//     padding: 10px 15px;
+//     border: none;
+//     border-radius: 20px;
+//     box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.36);
+//     @include mq($from:xs, $until:xl){
+//       width: 280px;
+//     }
+//     &:hover, &:focus{
+//       outline: none;
+//     }
+//     &:focus::-webkit-input-placeholder{
+//       color: transparent;
+//     }
+//     &:focus::placeholder{
+//       color: transparent;
+//     }
+//   }
+//   &__icon{
+//     display: block;
+//     position: absolute;
+//     z-index: 3;
+//     right: 0;
+//     top: 50%;
+//     transform: translate(-100%, -50%);
+//     @include sprite($s-loupe);
+//     background-color: transparent;
+//     border: none;
+//     outline: none;
+
+//     @include mq($from:md, $until:lg){
+//       position: relative;
+//       top: inherit;
+//       right: 10px;
+//       transform: none;
+//       display: inline-block;
+//       vertical-align: bottom;
+//     }
+//     @include mq($from:xs, $until:md){
+//       position: relative;
+//       transform: none;
+//       display: inline-block;
+
+//     }
+//   }
+// }
+
+
+// .hamburger{
+//   display: inline-block;
+//   margin-top: 10px;
+//   margin-bottom: 10px;
+//   @include sprite($s-hamburger);
+// }
+
+// .hamburger--close{
+//   @include sprite($s-hamburger-close);
+// }
+
+// .fixed {
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+//   z-index: 1000;
+//   background-color: rgba(51,190,229, 0.9);
+
+//   .nav {
+//     margin-top: 0;
+//   }
+// }

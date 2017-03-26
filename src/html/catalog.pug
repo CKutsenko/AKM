@@ -1,0 +1,11 @@
+extends partials/templates/template.pug
+
+block content
+    .container
+      .row
+        .col-xs-12.col-md-3
+          include partials/components/sidebar.pug
+        .col-xs-12.col-md-9
+          include partials/components/catalog-header.pug
+          include partials/components/catalog.pug
+          include partials/components/pagination.pug

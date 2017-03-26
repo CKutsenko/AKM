@@ -23,7 +23,11 @@ jQuery(document).ready(function($){
       $('.sidebar__list').toggle();
     });
 
-
+    $(function() {
+      $('select').selectric({
+         arrowButtonMarkup: '<b class="button"></b>',
+      });
+    });
 
   /* Карусель на карте */
   $('.slider').slick({

@@ -1,0 +1,18 @@
+include ../abstracts/bemto/bemto.pug
+
++b.pagination
+  +e.UL.list
+    +e.LI.item
+      +e.A.link--prev(href="#")
+    +e.LI.item
+      +e.A.link--active(href="#") 1
+    +e.LI.item
+      +e.A.link(href="#") 2
+    +e.LI.item
+      +e.A.link(href="#") 3
+    +e.LI.item
+      +e.A.link(href="#") ...
+    +e.LI.item
+      +e.A.link(href="#") 15
+    +e.LI.item
+      +e.A.link--next(href="#")

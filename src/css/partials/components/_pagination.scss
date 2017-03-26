@@ -1,0 +1,53 @@
+.pagination {
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 60px;
+    @include mq($from:xs, $until:xl){
+      justify-content: center;
+      padding-bottom: 30px;
+    }
+  &__list {
+    list-style-type: none;
+    padding-left: 0;
+    padding-right: 10px;
+    position: relative;
+  }
+  &__item {
+    display: inline-block;
+    padding: 10px;
+  }
+  &__link {
+    &--active {
+      font-weight: bold;
+    }
+    &--prev {
+      position: relative;
+      &:after {
+        width: 10px;
+        height: 10px;
+        border-right: 3px solid $black;
+        border-bottom: 3px solid $black;
+        transform: rotate(135deg);
+        position: absolute;
+        content: '';
+      }
+    }
+    &--next {
+      position: relative;
+      &:after {
+        width: 10px;
+        height: 10px;
+        border-right: 3px solid $black;
+        border-bottom: 3px solid $black;
+        transform: rotate(315deg);
+        position: absolute;
+        content: '';
+      }
+    }
+  }
+}
