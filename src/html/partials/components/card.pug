@@ -1,0 +1,34 @@
+include ../abstracts/bemto/bemto.pug
+
++b.SECTION.card
+  .container
+    .row
+      .col-xs-12.col-md-5
+        +e.slider-top
+          img(src="img/item.jpg")
+          img(src="img/item.jpg")
+          img(src="img/item.jpg")
+          img(src="img/item.jpg")
+          img(src="img/item.jpg")
+          img(src="img/item.jpg")
+        +e.slide
+          img(src="img/item.jpg")
+          img(src="img/item.jpg")
+          img(src="img/item.jpg")
+          img(src="img/item.jpg")
+          img(src="img/item.jpg")
+          img(src="img/item.jpg")
+      .col-xs-12.col-md-7
+        +e.H1.title Сувенир Наперсток “Санкт-Петербург ”
+        +e.P.code арт. 256 89 687
+        +e.SPAN.line
+        +e.P.price 100 руб/шт.
+        +e.P.text Упаковка:
+          span 10 штук
+        +e.P.text Цена за упаковку:
+          span 1000 руб.
+        +e.P.text Материал:
+          span Латунь
+        +e.btn-wrapper
+          +e.A.btn(href="#") В корзину
+

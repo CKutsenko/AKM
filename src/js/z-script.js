@@ -40,6 +40,21 @@ jQuery(document).ready(function($){
     autoplaySpeed: 3000
   });
 
+ $('.card__slider-top').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.card__slide'
+});
+$('.card__slide').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  asNavFor: '.card__slider-top',
+  dots: false,
+  arrows: false,
+  focusOnSelect: true
+});
 
 });
 
