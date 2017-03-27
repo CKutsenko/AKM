@@ -767,6 +767,7 @@ body {
   color: #474747;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
+  background-color: #eead00;
   position: relative; }
   body:before {
     position: absolute;
@@ -785,9 +786,11 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    background: url(../img/pattern.png) repeat;
-    background-size: 175px 180px;
-    z-index: -1; }
+    z-index: -1;
+    background-image: url(../img/pattern.svg);
+    background-position: 50% 0;
+    background-size: 120px auto;
+    background-repeat: repeat; }
 
 .container {
   background-color: #ffffff;
@@ -959,11 +962,14 @@ h4 {
   .nav__item {
     display: inline-block;
     background-color: #e31e25;
-    height: 100%; }
+    height: 100%;
+    font-size: 0; }
     .nav__item--last {
       position: absolute;
       right: 0;
       top: 0;
+      background-color: #ff8a00; }
+    .nav__item:hover {
       background-color: #ff8a00; }
     .nav__item--active {
       background-color: #ff8a00;
@@ -980,9 +986,9 @@ h4 {
     text-transform: uppercase;
     font-size: 14px;
     display: block;
-    margin: 10px 22px; }
+    padding: 10px 22px; }
     .nav__link--last {
-      margin: 10px 40px;
+      padding: 10px 40px;
       font-weight: bold; }
 
 .footer .row {
@@ -1019,7 +1025,19 @@ h4 {
     .sidebar__item--active .sidebar__sublist {
       display: block; }
   .sidebar__subitem {
-    padding-bottom: 5px; }
+    padding-bottom: 5px;
+    position: relative; }
+    .sidebar__subitem:before {
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: radial-gradient(#e3dfdf 1px, transparent 1px);
+      background-size: 7px 7px;
+      background-repeat: repeat-x;
+      height: 10px;
+      width: 12px;
+      left: -18px;
+      bottom: 5px; }
   .sidebar__sublink {
     font-weight: normal; }
     .sidebar__sublink--active {
@@ -1515,7 +1533,7 @@ h4 {
   font-weight: bold; }
 
 .card {
-  padding-bottom: 50px; }
+  padding-bottom: 100px; }
   .card .col-md-5 {
     padding-right: 20px; }
   .card__slider-top {
@@ -1527,12 +1545,19 @@ h4 {
       width: 100%;
       height: 100%;
       border: 1px solid #dddddd;
+      border-right: none;
       outline: none; }
+    .card__slider-top .slick-track {
+      height: 301px; }
   .card__slide {
     padding-bottom: 20px; }
     .card__slide img {
-      border: 1px solid #dddddd;
-      outline: none; }
+      border: 1px solid #ddd;
+      outline: 0;
+      border-right: none; }
+    .card__slide .draggable {
+      border-right: 1px solid #ddd;
+      margin-left: -1px; }
   .card .draggable {
     border-right: 1px solid #dddddd; }
   .card__title {

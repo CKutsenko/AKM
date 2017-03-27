@@ -183,10 +183,14 @@
     display: inline-block;
     background-color: $red;
     height: 100%;
+    font-size: 0;
     &--last {
       position: absolute;
       right: 0;
       top: 0;
+      background-color: $orange;
+    }
+    &:hover {
       background-color: $orange;
     }
     &--active {
@@ -207,9 +211,9 @@
     text-transform: uppercase;
     font-size: 14px;
     display: block;
-    margin: 10px 22px;
+    padding: 10px 22px;
     &--last {
-      margin: 10px 40px;
+      padding: 10px 40px;
       font-weight: bold;
     }
   }

@@ -44,6 +44,19 @@
   }
   &__subitem {
     padding-bottom: 5px;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: radial-gradient(#e3dfdf 1px, transparent 1px);
+      background-size: 7px 7px;
+      background-repeat: repeat-x;
+      height: 10px;
+      width: 12px;
+      left: -18px;
+      bottom: 5px;
+    }
   }
   &__sublink {
     font-weight: normal;

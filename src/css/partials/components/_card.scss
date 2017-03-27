@@ -1,5 +1,5 @@
 .card {
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   .col-md-5 {
     padding-right: 20px;
   }
@@ -15,7 +15,11 @@
       width: 100%;
       height: 100%;
       border: 1px solid #dddddd;
+      border-right: none;
       outline: none;
+    }
+    .slick-track {
+      height: 301px;
     }
   }
   &__slide {
@@ -24,8 +28,13 @@
       margin-left: 15px;
     }
     img {
-      border: 1px solid #dddddd;
-      outline: none;
+      border: 1px solid #ddd;
+      outline: 0;
+      border-right: none;
+    }
+    .draggable {
+      border-right: 1px solid #ddd;
+      margin-left: -1px;
     }
   }
   .draggable {
