@@ -23,7 +23,7 @@
     }
   }
   &__slide {
-    padding-bottom: 20px;
+    border-right: 1px solid #ddd;
     @include mq($from:xs, $until:xl){
       margin-left: 15px;
     }
@@ -34,7 +34,6 @@
     }
     .draggable {
       border-right: 1px solid #ddd;
-      margin-left: -1px;
     }
   }
   .draggable {

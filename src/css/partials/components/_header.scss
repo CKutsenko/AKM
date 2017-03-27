@@ -34,6 +34,7 @@
     height: 38px;
     padding-left: 12px;
     font-size: 14px;
+    outline: none;
   }
   &__button {
     position: absolute;
@@ -166,7 +167,7 @@
   }
 }
 
-.nav {
+.main-nav {
   position: relative;
     @include mq($from:xs, $until:xl){
       display: none;
@@ -178,12 +179,12 @@
     height: 38px;
     margin-top: 5px;
     padding-left: 0;
+    font-size: 0;
   }
   &__item {
     display: inline-block;
     background-color: $red;
     height: 100%;
-    font-size: 0;
     &--last {
       position: absolute;
       right: 0;

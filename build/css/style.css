@@ -768,7 +768,8 @@ body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
   background-color: #eead00;
-  position: relative; }
+  position: relative;
+  min-height: 100vh; }
   body:before {
     position: absolute;
     content: '';
@@ -860,7 +861,8 @@ h4 {
     margin-top: 20px;
     height: 38px;
     padding-left: 12px;
-    font-size: 14px; }
+    font-size: 14px;
+    outline: none; }
   .search__button {
     position: absolute;
     height: 38px;
@@ -950,44 +952,44 @@ h4 {
     .cart__btn:hover {
       background-color: #dddddd; }
 
-.nav {
+.main-nav {
   position: relative; }
-  .nav__list {
+  .main-nav__list {
     list-style-type: none;
     background-color: #e31e25;
     width: 100%;
     height: 38px;
     margin-top: 5px;
-    padding-left: 0; }
-  .nav__item {
+    padding-left: 0;
+    font-size: 0; }
+  .main-nav__item {
     display: inline-block;
     background-color: #e31e25;
-    height: 100%;
-    font-size: 0; }
-    .nav__item--last {
+    height: 100%; }
+    .main-nav__item--last {
       position: absolute;
       right: 0;
       top: 0;
       background-color: #ff8a00; }
-    .nav__item:hover {
+    .main-nav__item:hover {
       background-color: #ff8a00; }
-    .nav__item--active {
+    .main-nav__item--active {
       background-color: #ff8a00;
       position: relative; }
-      .nav__item--active:after {
+      .main-nav__item--active:after {
         content: '';
         position: absolute;
         border: 8px solid transparent;
         border-bottom: 8px solid #f3f3f3;
         bottom: 0;
         left: calc(50% - 8px); }
-  .nav__link {
+  .main-nav__link {
     color: #ffffff;
     text-transform: uppercase;
     font-size: 14px;
     display: block;
     padding: 10px 22px; }
-    .nav__link--last {
+    .main-nav__link--last {
       padding: 10px 40px;
       font-weight: bold; }
 
@@ -1007,27 +1009,28 @@ h4 {
 
 .sidebar {
   white-space: wrap; }
-  .sidebar__list {
-    padding-left: 0;
-    list-style-type: none; }
-  .sidebar__link {
-    font-size: 20px;
+
+.tree-nav {
+  padding-left: 0;
+  list-style-type: none; }
+  .tree-nav__link {
+    font-size: 18px;
     width: 100%; }
-  .sidebar__item {
+  .tree-nav__item {
     padding-bottom: 13px; }
-  .sidebar__sublist {
+  .tree-nav__sublist {
     display: none;
     font-size: 18px;
     list-style-type: none;
     padding-top: 10px; }
-  .sidebar__item--active {
+  .tree-nav__item--active {
     font-weight: bold; }
-    .sidebar__item--active .sidebar__sublist {
+    .tree-nav__item--active .tree-nav__sublist {
       display: block; }
-  .sidebar__subitem {
+  .tree-nav__subitem {
     padding-bottom: 5px;
     position: relative; }
-    .sidebar__subitem:before {
+    .tree-nav__subitem:before {
       content: '';
       display: block;
       position: absolute;
@@ -1038,9 +1041,9 @@ h4 {
       width: 12px;
       left: -18px;
       bottom: 5px; }
-  .sidebar__sublink {
+  .tree-nav__sublink {
     font-weight: normal; }
-    .sidebar__sublink--active {
+    .tree-nav__sublink--active {
       font-weight: bold; }
 
 .mobile-nav {
@@ -1550,14 +1553,13 @@ h4 {
     .card__slider-top .slick-track {
       height: 301px; }
   .card__slide {
-    padding-bottom: 20px; }
+    border-right: 1px solid #ddd; }
     .card__slide img {
       border: 1px solid #ddd;
       outline: 0;
       border-right: none; }
     .card__slide .draggable {
-      border-right: 1px solid #ddd;
-      margin-left: -1px; }
+      border-right: 1px solid #ddd; }
   .card .draggable {
     border-right: 1px solid #dddddd; }
   .card__title {
@@ -2332,18 +2334,18 @@ h4 {
     position: absolute;
     top: -20px;
     right: 10px; }
-  .sidebar__list {
+  .tree-nav {
     display: none;
     font-size: 14px;
     text-align: center;
     margin-top: 0; }
-  .sidebar__link {
+  .tree-nav__link {
     font-size: 18px;
     text-align: center; }
-  .sidebar__item {
+  .tree-nav__item {
     padding-bottom: 7px;
     border-bottom: 1px solid #dddddd; }
-  .sidebar__sublist {
+  .tree-nav__sublist {
     font-size: 14px;
     padding-top: 4px;
     padding-left: 0; }
@@ -2371,7 +2373,7 @@ h4 {
     margin-left: calc(50% - 75px); }
   .search {
     display: none; }
-  .nav {
+  .main-nav {
     display: none; }
   .slider {
     display: none; }

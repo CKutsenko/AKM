@@ -21,6 +21,7 @@ body {
   font-size: $font-size-text;
   background-color: #eead00;
   position: relative;
+  min-height: 100vh;
   &:before {
     position: absolute;
     content: '';

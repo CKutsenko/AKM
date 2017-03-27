@@ -1,6 +1,7 @@
 .sidebar {
   white-space: wrap;
-  &__list {
+}
+ .tree-nav {
     padding-left: 0;
     list-style-type: none;
     @include mq($from:xs, $until:md){
@@ -9,15 +10,14 @@
       text-align: center;
       margin-top: 0;
     }
-  }
-  &__link {
-    font-size: 20px;
+    &__link {
+    font-size: 18px;
     width: 100%;
     @include mq($from:xs, $until:md){
       font-size: 18px;
       text-align: center;
+      }
     }
-  }
   &__item {
     padding-bottom: 13px;
     @include mq($from:xs, $until:md){
@@ -38,7 +38,7 @@
   }
   &__item--active {
     font-weight: bold;
-    .sidebar__sublist {
+    .tree-nav__sublist {
       display: block;
     }
   }
@@ -62,8 +62,8 @@
     font-weight: normal;
     &--active {
       font-weight: bold;
-    }
   }
+ }
 }
 
 .mobile-nav {

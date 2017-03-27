@@ -2,18 +2,18 @@ jQuery(document).ready(function($){
 
 
 /* Аккордеон*/
-  $('.sidebar__link').click(function(e){
-    e.preventDefault();
-     if($(this).next('.sidebar__sublist').is(":visible")) {
-      $(this).next('.sidebar__sublist').slideUp();
-      $(this).closest('.sidebar__item').removeClass('sidebar__item--active');
-    } else {
-      $(this).closest('.sidebar').find('.sidebar__sublist').slideUp();
-      $(this).closest('.sidebar').find('.sidebar__item').removeClass('sidebar__item--active');
-      $(this).next('.sidebar__sublist').slideDown();
-      $(this).closest('.sidebar__item').addClass('sidebar__item--active');
-    }
-  });
+  // $('.tree-nav__link').click(function(e){
+  //   e.preventDefault();
+  //    if($(this).next('.tree-nav__sublist').is(":visible")) {
+  //     $(this).next('.tree-nav__sublist').slideUp();
+  //     $(this).closest('.tree-nav__item').removeClass('tree-nav__item--active');
+  //   } else {
+  //     $(this).closest('.tree-nav').find('.tree-nav__sublist').slideUp();
+  //     $(this).closest('.tree-nav').find('.tree-nav__item').removeClass('tree-nav__item--active');
+  //     $(this).next('.tree-nav__sublist').slideDown();
+  //     $(this).closest('.tree-nav__item').addClass('tree-nav__item--active');
+  //   }
+  // });
 
   /* Hamburger */
 
